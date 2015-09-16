@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="ABOUT"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:gravity="center"
+		android:padding="10dp"
+		android:textColor="#FFFFFF"
+		android:background="#2BB12D"
+		android:textStyle="bold"
+		android:typeface="serif"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="About App"
+		android:layout_width="match_parent"
+		android:padding="7dp"
+		android:textColor="#000000"
+		android:textStyle="bold"
+		android:background="#DFDFDF"
+		android:textSize="18sp"
+		android:typeface="serif"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="It is a simple calculator to calculate the total bill charged by the mobile operators of Bangladesh after adding Vat and SD fees."
+		android:layout_width="match_parent"
+		android:padding="7dp"
+		android:textSize="16sp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="About Developer"
+		android:layout_width="match_parent"
+		android:padding="7dp"
+		android:background="#DFDFDF"
+		android:textStyle="bold"
+		android:textSize="18sp"
+		android:typeface="serif"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="All Credit Goes To Almighty Allah"
+		android:layout_width="match_parent"
+		android:padding="7dp"
+		android:background="#F6F6F6"
+		android:textSize="17sp"
+		android:textStyle="bold|italic"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="This app is developed by-"
+		android:layout_width="match_parent"
+		android:background="#F6F6F6"
+		android:textSize="16sp"
+		android:textStyle="normal"
+		android:paddingLeft="7dp"
+		android:paddingRight="7dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Roaim Ahmed Hridoy"
+		android:layout_width="match_parent"
+		android:background="#F6F6F6"
+		android:textSize="16sp"
+		android:textStyle="normal"
+		android:typeface="serif"
+		android:paddingLeft="7dp"
+		android:layout_marginRight="7dp"
+		android:paddingBottom="3dp"
+		android:paddingTop="3dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="Noakhali Science and Technology University"
+		android:layout_width="match_parent"
+		android:background="#F6F6F6"
+		android:textSize="16sp"
+		android:textStyle="normal"
+		android:paddingLeft="7dp"
+		android:paddingRight="7dp"
+		android:paddingBottom="10dp"/>
+
+</LinearLayout>
+

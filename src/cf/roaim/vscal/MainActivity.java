@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.Color;
 import android.text.Html;
+import android.app.AlertDialog;
 
 public class MainActivity extends Activity
 {
@@ -120,6 +121,22 @@ public class MainActivity extends Activity
 					if(!digit.equals("")){
 						tv.setText(digit+" TK");
 					} else tv.setText("0 TK");
+					return true;
+				}
+			});
+		menu.add("About").setShowAsAction(MenuItem.SHOW_AS_ACTION_NEVER);
+		menu.getItem(1).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
+
+				private View aboutView;
+
+				@Override
+				public boolean onMenuItemClick(MenuItem p1)
+				{
+					aboutView = View.inflate(MainActivity.this,R.layout.about,null);
+					new AlertDialog.Builder(MainActivity.this).
+					setCancelable(true).
+					setView(aboutView).
+					show();
 					return true;
 				}
 			});
