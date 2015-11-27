@@ -1,6 +1,5 @@
 package cf.roaim.vscal;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -16,21 +15,25 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.Color;
 import android.text.Html;
 import android.app.AlertDialog;
+import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
+import android.content.Context;
 
-public class MainActivity extends Activity
+public class MainActivity extends AppCompatActivity
 {
     GridView gv ;
 	TextView tv;
 	ArrayAdapter<String> adapter ;
 	String digit = "";
 	String fRes;
+	SharedPreferences sp;
 	
     @Override
     public void onCreate(Bundle savedInstanceState)
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-		getActionBar()
+		getSupportActionBar()
 		.setTitle(Html.fromHtml("<font color=\"#eeeeee\">" + getString(R.string.app_name) + "</font>"));
 		init();
 		gv.setAdapter(adapter);
@@ -38,8 +41,13 @@ public class MainActivity extends Activity
 
 	private void init()
 	{
+			sp = getSharedPreferences("vsc",Context.MODE_PRIVATE);
 		String[] digits={"1","2","3","4","5","6","7","8","9",".","0","="};
 		tv=(TextView) findViewById(R.id.mainTextView1);
+		if(!sp.getString("digit","0").equals("")){
+					digit=sp.getString("digit","0");
+				tv.setText(sp.getString("digit","0")+" TK");
+		}
 		gv=(GridView) findViewById(R.id.mainGridView1);
 		adapter = new ArrayAdapter<String>(this,R.layout.view,digits){
 			@Override
@@ -59,6 +67,7 @@ public class MainActivity extends Activity
 								double d = Double.parseDouble(digit);
 								String result = getResultVS(d);
 							fRes=result;
+							sp.edit().putString("digit","").apply();
 							} else{
 								fRes="";
 							}
@@ -104,7 +113,7 @@ public class MainActivity extends Activity
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3B4B52")));
+		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3B4B52")));
 		menu.add("Del").setIcon(android.R.drawable.ic_menu_delete).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
 

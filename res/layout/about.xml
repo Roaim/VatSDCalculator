@@ -33,7 +33,9 @@
 		android:text="It is a simple calculator to calculate the total bill charged by the mobile operators of Bangladesh after adding Vat and SD fees."
 		android:layout_width="match_parent"
 		android:padding="7dp"
-		android:textSize="16sp"/>
+		android:textSize="16sp"
+		android:background="#F6F6F6"
+		android:textColor="#111111"/>
 
 	<TextView
 		android:layout_height="wrap_content"
@@ -43,7 +45,8 @@
 		android:background="#DFDFDF"
 		android:textStyle="bold"
 		android:textSize="18sp"
-		android:typeface="serif"/>
+		android:typeface="serif"
+		android:textColor="#000000"/>
 
 	<TextView
 		android:layout_height="wrap_content"
@@ -52,7 +55,8 @@
 		android:padding="7dp"
 		android:background="#F6F6F6"
 		android:textSize="17sp"
-		android:textStyle="bold|italic"/>
+		android:textStyle="bold|italic"
+		android:textColor="#000000"/>
 
 	<TextView
 		android:layout_height="wrap_content"
@@ -62,7 +66,8 @@
 		android:textSize="16sp"
 		android:textStyle="normal"
 		android:paddingLeft="7dp"
-		android:paddingRight="7dp"/>
+		android:paddingRight="7dp"
+		android:textColor="#1B1B1B"/>
 
 	<TextView
 		android:layout_height="wrap_content"
@@ -75,7 +80,8 @@
 		android:paddingLeft="7dp"
 		android:layout_marginRight="7dp"
 		android:paddingBottom="3dp"
-		android:paddingTop="3dp"/>
+		android:paddingTop="3dp"
+		android:textColor="#0B0B0B"/>
 
 	<TextView
 		android:layout_height="wrap_content"
@@ -86,7 +92,8 @@
 		android:textStyle="normal"
 		android:paddingLeft="7dp"
 		android:paddingRight="7dp"
-		android:paddingBottom="10dp"/>
+		android:paddingBottom="10dp"
+		android:textColor="#222222"/>
 
 </LinearLayout>
 

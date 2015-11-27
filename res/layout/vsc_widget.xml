@@ -26,17 +26,22 @@
 		android:text="0"
 		android:layout_width="match_parent"
 		android:gravity="right|center"
-		android:padding="7dp"
 		android:background="#BF3A3A3A"
 		android:textColor="#FFFFFF"
 		android:id="@+id/wTv"
 		android:textSize="20sp"
-		android:layout_below="@id/vscwidgetTextView1"/>
+		android:layout_below="@id/vscwidgetTextView1"
+		android:paddingBottom="7dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:paddingTop="7dp"
+		android:layout_marginLeft="2dp"
+		android:layout_marginRight="2dp"/>
 
 	<Button
 		android:layout_height="wrap_content"
 		android:text="7"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_below="@id/wTv"
 		android:id="@+id/wBt7"
 		android:layout_alignParentLeft="true"
@@ -45,7 +50,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="8"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_toRightOf="@id/wBt7"
 		android:id="@+id/wBt8"
 		android:layout_below="@id/wTv"
@@ -54,7 +59,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="9"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_toRightOf="@id/wBt8"
 		android:layout_below="@id/wTv"
 		android:id="@+id/wBt9"
@@ -63,7 +68,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="4"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_below="@id/wBt7"
 		android:id="@+id/wBt4"
 		android:layout_alignParentLeft="true"
@@ -72,7 +77,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="5"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_below="@id/wBt8"
 		android:layout_toRightOf="@id/wBt7"
 		android:id="@+id/wBt5"
@@ -81,7 +86,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="6"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_below="@id/wBt9"
 		android:layout_toRightOf="@id/wBt8"
 		android:id="@+id/wBt6"
@@ -90,7 +95,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="1"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_below="@id/wBt4"
 		android:id="@+id/wBt1"
 		android:layout_alignParentLeft="true"
@@ -99,7 +104,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="2"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_toRightOf="@id/wBt7"
 		android:layout_below="@id/wBt5"
 		android:id="@+id/wBt2"
@@ -108,7 +113,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="3"
-		android:layout_width="wrap_content"
+		android:layout_width="58dp"
 		android:layout_toRightOf="@id/wBt2"
 		android:layout_below="@id/wBt6"
 		android:id="@+id/wBt3"
@@ -117,7 +122,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="."
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_toRightOf="@id/wBt9"
 		android:layout_below="@id/wTv"
 		android:layout_alignParentRight="true"
@@ -127,7 +132,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="0"
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_toRightOf="@id/wBt6"
 		android:layout_below="@id/wBt9"
 		android:layout_alignParentRight="true"
@@ -137,7 +142,7 @@
 	<Button
 		android:layout_height="wrap_content"
 		android:text="="
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_toRightOf="@id/wBt3"
 		android:layout_below="@id/wBt6"
 		android:layout_alignParentRight="true"

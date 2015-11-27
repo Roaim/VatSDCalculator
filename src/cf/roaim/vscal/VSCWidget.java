@@ -80,6 +80,10 @@ public class VSCWidget extends AppWidgetProvider
 						RemoteViews rv = new RemoteViews(context.getPackageName(),R.layout.vsc_widget);
 						lg("tvText: "+tvText);
 						rv.setTextViewText(R.id.wTv,tvText);
+						Intent activity = new Intent(context,MainActivity.class);
+						activity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+						PendingIntent penin=PendingIntent.getActivity(context,0,activity,0);
+						rv.setOnClickPendingIntent(R.id.vscwidgetRelativeLayout,penin);
 						for(int x=0;x<getBtIds().length;x++){
 								Intent intent = getBtIntent(context,id,x);
 								PendingIntent pi = PendingIntent.getBroadcast(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
