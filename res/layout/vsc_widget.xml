@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_height="wrap_content"
+	android:layout_width="wrap_content"
+	android:id="@+id/vscwidgetRelativeLayout"
+	android:gravity="center"
+	android:padding="10dp"
+	android:background="#75000000">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:id="@+id/vscwidgetTextView1"
+		android:background="#DD00A0FF"
+		android:padding="10dp"
+		android:textColor="#FFFFFF"
+		android:textStyle="bold"
+		android:typeface="serif"
+		android:textSize="14sp"
+		android:text="Vat+SD Calculator"
+		android:layout_marginBottom="5dp"/>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="0"
+		android:layout_width="match_parent"
+		android:gravity="right|center"
+		android:padding="7dp"
+		android:background="#BF3A3A3A"
+		android:textColor="#FFFFFF"
+		android:id="@+id/wTv"
+		android:textSize="20sp"
+		android:layout_below="@id/vscwidgetTextView1"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="7"
+		android:layout_width="wrap_content"
+		android:layout_below="@id/wTv"
+		android:id="@+id/wBt7"
+		android:layout_alignParentLeft="true"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="8"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/wBt7"
+		android:id="@+id/wBt8"
+		android:layout_below="@id/wTv"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="9"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/wBt8"
+		android:layout_below="@id/wTv"
+		android:id="@+id/wBt9"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="4"
+		android:layout_width="wrap_content"
+		android:layout_below="@id/wBt7"
+		android:id="@+id/wBt4"
+		android:layout_alignParentLeft="true"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="5"
+		android:layout_width="wrap_content"
+		android:layout_below="@id/wBt8"
+		android:layout_toRightOf="@id/wBt7"
+		android:id="@+id/wBt5"
+		android:textColor="#FCFCFC"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="6"
+		android:layout_width="wrap_content"
+		android:layout_below="@id/wBt9"
+		android:layout_toRightOf="@id/wBt8"
+		android:id="@+id/wBt6"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="1"
+		android:layout_width="wrap_content"
+		android:layout_below="@id/wBt4"
+		android:id="@+id/wBt1"
+		android:layout_alignParentLeft="true"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="2"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/wBt7"
+		android:layout_below="@id/wBt5"
+		android:id="@+id/wBt2"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="3"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/wBt2"
+		android:layout_below="@id/wBt6"
+		android:id="@+id/wBt3"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="."
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/wBt9"
+		android:layout_below="@id/wTv"
+		android:layout_alignParentRight="true"
+		android:id="@+id/wBtP"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="0"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/wBt6"
+		android:layout_below="@id/wBt9"
+		android:layout_alignParentRight="true"
+		android:id="@+id/wBt0"
+		android:textColor="#FFFFFF"/>
+
+	<Button
+		android:layout_height="wrap_content"
+		android:text="="
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/wBt3"
+		android:layout_below="@id/wBt6"
+		android:layout_alignParentRight="true"
+		android:id="@+id/wBtE"
+		android:textColor="#FFFFFF"/>
+
+</RelativeLayout>
+
