@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.content.SharedPreferences;
 import java.text.DecimalFormat;
+import android.content.ComponentName;
 
 public class VSCWidget extends AppWidgetProvider
 {
@@ -50,9 +51,11 @@ public class VSCWidget extends AppWidgetProvider
 								tvText=sDigit;
 								sp.edit().putString(KEYSP,sDigit).apply();
 						}
-						int[] ids = {intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,-1)};
-						lg("intent not null: \nId: "+ids+" text: "+tvText);
+						//int id = intent.getIntExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,-1);
+						//lg("intent not null: \nId: "+id+" text: "+tvText);
 						AppWidgetManager awm = AppWidgetManager.getInstance(context);
+						ComponentName comName = new ComponentName(context,this.getClass());
+						int[] ids=awm.getAppWidgetIds ( comName );
 						onUpdate(context,awm,ids);
 				}
 				super.onReceive ( context, intent );
@@ -85,7 +88,8 @@ public class VSCWidget extends AppWidgetProvider
 						PendingIntent penin=PendingIntent.getActivity(context,0,activity,0);
 						rv.setOnClickPendingIntent(R.id.vscwidgetRelativeLayout,penin);
 						for(int x=0;x<getBtIds().length;x++){
-								Intent intent = getBtIntent(context,id,x);
+								//Intent intent = getBtIntent(context,id,x);
+								Intent intent = getBtIntent(context,x);
 								PendingIntent pi = PendingIntent.getBroadcast(context,0,intent,PendingIntent.FLAG_UPDATE_CURRENT);
 								rv.setOnClickPendingIntent(getBtIds()[x],pi);
 						}
@@ -94,11 +98,12 @@ public class VSCWidget extends AppWidgetProvider
 				}
 		}
 		
-		private Intent getBtIntent(Context context,int ids,int position){
+		//private Intent getBtIntent(Context context,int ids,int position){
+		private Intent getBtIntent(Context context,int position){
 				Intent intent = new Intent(context,VSCWidget.class);
 				intent.setAction(tvTexts[position]);
 				intent.putExtra(KEY,17);
-				intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,ids);
+				//intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,ids);
 				return intent;
 		}
 		private static void lg(String log){
