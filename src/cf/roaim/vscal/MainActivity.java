@@ -15,11 +15,11 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.Color;
 import android.text.Html;
 import android.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.content.SharedPreferences;
 import android.content.Context;
+import android.app.Activity;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends Activity
 {
     GridView gv ;
 	TextView tv;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity
 	{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-		getSupportActionBar()
+		getActionBar()
 		.setTitle(Html.fromHtml("<font color=\"#eeeeee\">" + getString(R.string.app_name) + "</font>"));
 		init();
 		gv.setAdapter(adapter);
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu)
 	{
-		getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3B4B52")));
+		getActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3B4B52")));
 		menu.add("Del").setIcon(android.R.drawable.ic_menu_delete).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 		menu.getItem(0).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
 

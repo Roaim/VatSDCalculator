@@ -42,11 +42,13 @@ public class VSCWidget extends AppWidgetProvider
 								}
 						} else if(digit.equals(".")){
 								if(!sDigit.contains(".")){
+										if(sDigit.equals("")) sDigit="0";
 										sDigit+=".";
 										tvText=sDigit;
 										sp.edit().putString(KEYSP,sDigit).apply();
 								} else return;
 						} else {
+								if(sDigit.equals("") && digit.equals("0")) return;
 								sDigit+=digit;
 								tvText=sDigit;
 								sp.edit().putString(KEYSP,sDigit).apply();
